@@ -6,7 +6,6 @@
 function isPangram(string){
     let str = string.toLowerCase().split(' ').join('').split('').sort().join('')
     if(str.length < 26){return false}
-    console.log(str)
     for(i = str.indexOf('a'); i < str.length; i++){
       if(str[i] == 'z'){return true}
       else if(str[i] != str[i+1] && str.charCodeAt(i) + 1 != str.charCodeAt(i + 1)){return false}
