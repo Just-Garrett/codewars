@@ -96,6 +96,18 @@ decodeMorse = function(morseCode){
           case '--..':
             return 'Z';
             break;
+          case '...---...':
+            return 'SOS';
+            break;
+          case '.-.-.-':
+            return '.';
+            break;
+          case '-.-.--':
+            return '!';
+            break;
+          case ' ':
+            return '';
+            break;
       }
     }
     for(i = 0; i < morseWords.length; i++){
@@ -106,8 +118,13 @@ decodeMorse = function(morseCode){
         console.log(morseLtrs[i][j])
         convertedWord.push(convert(morseLtrs[i][j]))
       }
-      answer.push(convertedWord.join(''))
-      convertedWord = []
+      if (convertedWord == '' || convertedWord == ' '){
+        convertedWord = []
+      } else {
+        answer.push(convertedWord.join(''))
+        convertedWord = []          
+      }
+  
     }
     return answer.join(' ')
-  }
+}
