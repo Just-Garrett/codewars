@@ -18,34 +18,34 @@ var lastDigit = function(str1, str2){
         case 1:
           return 1;
         case 2:
-          if(str2Last % 4 == 0){return 4}
-          else if(str2Last % 4 == 1){return 8}
-          else if(str2Last % 4 == 2){return 6}
-          else if(str2Last % 4 == 3){return 2};
+          if(str2Last % 4 == 0){return 2}
+          else if(str2Last % 4 == 1){return 4}
+          else if(str2Last % 4 == 2){return 8}
+          else if(str2Last % 4 == 3){return 6};
         case 3:
-          if(str2Last % 4 == 2){return 9}
-          else if(str2Last % 4 == 3){return 7}
-          else if(str2Last % 4 == 0){return 1}
-          else if(str2Last % 4 == 1){return 3};
+          if(str2Last % 4 == 0){return 3}
+          else if(str2Last % 4 == 1){return 9}
+          else if(str2Last % 4 == 2){return 7}
+          else if(str2Last % 4 == 3){return 1};
         case 4:
-          if(str2Last % 2 == 0){return 6}
-          else if(str2Last % 2 == 1){return 4};
+          if(str2Last % 2 == 0){return 4}
+          else if(str2Last % 2 == 1){return 6};
         case 5:
           return 5;
         case 6:
           return 6;
         case 7:
+          if(str2Last % 4 == 0){return 7};
           if(str2Last % 4 == 1){return 9};
           if(str2Last % 4 == 2){return 3};
           if(str2Last % 4 == 3){return 1};
-          if(str2Last % 4 == 0){return 7};
         case 8:
-          if(str2Last % 4 == 0){return 4};
-          if(str2Last % 4 == 1){return 2};
-          if(str2Last % 4 == 2){return 6};
-          if(str2Last % 4 == 3){return 8};
+          if(str2Last % 4 == 0){return 8};
+          if(str2Last % 4 == 1){return 4};
+          if(str2Last % 4 == 2){return 2};
+          if(str2Last % 4 == 3){return 6};
         case 9:
-          if(str2Last % 2 == 0){return 1};
-          if(str2Last % 2 == 1){return 9};
+          if(str2Last % 2 == 0){return 9};
+          if(str2Last % 2 == 1){return 1};
     }
 }
