@@ -18,7 +18,7 @@ function race(v1, v2, g) {
     for(i = 0; i < 1000000; i++){
       d1 += perSec1
       d2 += perSec2
-      if(d2 >= d1){break}
+      if(d2 > d1){break}
       countSec += 1
     }
     let hours = Math.floor(countSec / 3600)
